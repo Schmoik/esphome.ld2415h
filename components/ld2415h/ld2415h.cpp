@@ -302,7 +302,7 @@ void LD2415HComponent::parse_config_param_(char *key, char *value) {
   switch (key[1]) {
     case '1':
       this->min_speed_threshold_ = v;
-      this->min_speed_threshold.publish_state(this->min_speed_threshold_);
+      this->min_speed_threshold_.publish_state(this->min_speed_threshold_);
       break;
     case '2':
       this->compensation_angle_ = std::stoi(value, nullptr, 16);
